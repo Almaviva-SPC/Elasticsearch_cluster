@@ -65,7 +65,7 @@ network.host: {{ansible_default_ipv4.address}}
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
-{% for hosts in group ['master'] %}
+{% for hosts in groups['master'] %}
 discovery.zen.ping.unicast.hosts: "{{hostvars[hosts].ansible_default_ipv4.address}}:9300"
 {% endfor %}
 #
