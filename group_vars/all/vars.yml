@@ -1,2 +1,2 @@
 el_cluster.name: cluster 
-el_path.data = /opt/data/
+el_path.data: /opt/data/
