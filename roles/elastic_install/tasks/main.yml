@@ -10,5 +10,5 @@
 
 - name: copia del file di conf di elastic 
   template:
-    src: templates/master_elasticsearch.yml.j2
+    src: templates/elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
