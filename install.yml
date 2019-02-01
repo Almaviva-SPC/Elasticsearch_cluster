@@ -2,3 +2,8 @@
   template:
     src: templates/elasticsearch.repo.j2
     dest: /etc/yum.repos.d/
+
+- name: installa ultima versione elastic
+  yum:
+    name: elasticsearch 
+    state: latest
