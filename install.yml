@@ -1,1 +1,4 @@
-fdf
+- name: copia del file repository 
+  template:
+    src: templates/elasticsearch.repo.j2
+    dest: /etc/yum.repos.d/
