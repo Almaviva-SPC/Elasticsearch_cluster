@@ -65,7 +65,9 @@ network.host: {{ansible_default_ipv4.address}}
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
-discovery.zen.ping.unicast.hosts: {{el_discovery_zen_ping_unicast_hosts}}:9300
+{% for hosts in group ['master'] %}
+discovery.zen.ping.unicast.hosts: "{{hostvars[hosts].ansible_default_ipv4.address}}:9300"
+{% endfor %}
 #
 # Prevent the "split brain" by configuring the majority of nodes (total number of master-eligible nodes / 2 + 1):
 #
