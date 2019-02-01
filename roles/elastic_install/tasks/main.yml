@@ -8,6 +8,13 @@
     name: elasticsearch 
     state: latest
 
+- name: setta il valore di discovery.zen.ping.unicast.hosts
+  set_fact:
+         el_discovery_zen_ping_unicast_hosts: "el_discovery_zen_ping_unicast_hosts + {{hostvars['master'][item].ansible_default_ipv4.address}}"
+  with_items:
+    - 0
+    - 1
+    
 - name: copia del file di conf di elastic 
   template:
     src: templates/elasticsearch.yml.j2
