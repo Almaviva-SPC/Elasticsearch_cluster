@@ -15,7 +15,7 @@
     
 - name: crea directory per i dati
   file: 
-    path: {{el_path_data}}
+    path: "{{el_path_data}}"
     state: directory
     owner: elasticsearch
     group: elasticsearch
