@@ -1,4 +1,4 @@
 el_cluster_name: cluster 
 el_path_data: /opt/data/
 #el_discovery_zen_ping_unicast_hosts: "{{hostvars[groups['master'][0]].ansible_default_ipv4.address}}"
-el_discovery_zen_ping_unicast_hosts:
+el_discovery_zen_ping_unicast_hosts: ""
