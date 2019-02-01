@@ -10,7 +10,7 @@
 
 - name: setta il valore di discovery.zen.ping.unicast.hosts
   set_fact:
-         el_discovery_zen_ping_unicast_hosts: "{{el_discovery_zen_ping_unicast_hosts + hostvars[groups['master'][item]].ansible_default_ipv4.address}}" + ":9300" + ";"
+         el_discovery_zen_ping_unicast_hosts: "{{el_discovery_zen_ping_unicast_hosts + hostvars[groups['master'][item]].ansible_default_ipv4.address}} + :9300 + ;"
   with_items:
     - 0
     - 1
