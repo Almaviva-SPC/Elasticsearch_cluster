@@ -1,1 +1,11 @@
+cluster.name = 
+node.name = 
+elastic_path.data = /opt/data/
+network.host = 
 
+bootstrap.memory_lock: false
+discovery.zen.ping.unicast.hosts: 10.121.197.110:9300
+http.port: 9200
+node.data: false
+node.master: true
+transport.tcp.port: 9300
