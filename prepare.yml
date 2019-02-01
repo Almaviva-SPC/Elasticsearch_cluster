@@ -1,4 +1,4 @@
 - hosts: all
   become: true
   roles:
-   - elastic_install.yml
+   - elastic_install
