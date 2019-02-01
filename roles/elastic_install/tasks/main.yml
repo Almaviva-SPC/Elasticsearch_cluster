@@ -13,6 +13,13 @@
     src: templates/elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
     
+- name: crea directory per i dati
+  file: 
+    path: {{el_path_data}}
+    state: directory
+    owner: elasticsearch
+    group: elasticsearch
+
 - name: Starta il servizio elasticsearch
   service:
     name: elasticsearch
