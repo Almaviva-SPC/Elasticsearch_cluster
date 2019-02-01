@@ -1,10 +1,2 @@
-el_luster.name: cluster 
-el_node.name:  nodo1
+el_cluster.name: cluster 
 el_path.data = /opt/data/
-
-bootstrap.memory_lock: false
-discovery.zen.ping.unicast.hosts: 10.121.197.110:9300
-http.port: 9200
-node.data: false
-node.master: true
-transport.tcp.port: 9300
