@@ -12,3 +12,8 @@
   template:
     src: templates/elasticsearch.yml.j2
     dest: /etc/elasticsearch/elasticsearch.yml
+    
+- name: Starta il servizio elasticsearch
+  service:
+    name: elasticsearch
+    state: started    
