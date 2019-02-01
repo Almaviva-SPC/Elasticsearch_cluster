@@ -1,7 +1,6 @@
-cluster.name = 
-node.name = 
-elastic_path.data = /opt/data/
-network.host = 
+el_luster.name: cluster 
+el_node.name:  nodo1
+el_path.data = /opt/data/
 
 bootstrap.memory_lock: false
 discovery.zen.ping.unicast.hosts: 10.121.197.110:9300
